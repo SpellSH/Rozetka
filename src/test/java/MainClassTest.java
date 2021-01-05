@@ -2,6 +2,8 @@ import Pages.MainPage;
 import Pages.ProductPage;
 import Pages.Televisori;
 import Pages.WebSite;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -18,6 +20,8 @@ public class MainClassTest {
     WebElement P;*/
     WebDriver driver;
 
+
+    private static final Logger log = LogManager.getLogger(MainClassTest.class.getName());
     @BeforeClass
     public static void beforeClassMethod (){
 
@@ -49,6 +53,8 @@ public class MainClassTest {
         t.SearchProduct();
         ProductPage pp = new ProductPage(driver);
         pp.product();
+        log.info("info");
+
     }
     @Test
     public void method2 (){

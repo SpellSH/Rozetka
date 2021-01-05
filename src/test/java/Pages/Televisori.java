@@ -11,6 +11,6 @@ public class Televisori extends WebSite{
     public void SearchProduct() throws InterruptedException {
         P = driver.findElement(By.linkText("Телевизор Samsung UE43T5300AUXUA"));
         P.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
 }
